@@ -185,6 +185,70 @@ section h2 {
     transition: transform 0.3s;
 }
 
+/* Estilização para a seção de tópicos sobre psicologia */
+#topics {
+    padding: 80px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* Título dos tópicos */
+#topics h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Container dos cards de tópicos */
+.topics-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsivo */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo de cada card */
+.topic-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+/* Efeito de hover nos cards */
+.topic-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilização das imagens (ícones) */
+.topic-card img {
+    width: 60px; /* Tamanho do ícone */
+    height: 60px;
+    margin-bottom: 20px;
+    object-fit: contain;
+}
+
+/* Título de cada card */
+.topic-card h3 {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Texto de cada card */
+.topic-card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+
 .service-card:hover, .topic-card:hover {
     transform: translateY(-5px);
 }
@@ -319,6 +383,7 @@ footer {
     justify-content: center;
     align-items: center;
     height: 100%;
+
 }
 
 .hero-content h2 {
