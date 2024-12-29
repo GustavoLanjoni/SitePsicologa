@@ -115,44 +115,55 @@ section h2 {
 
 /*  Sobre */
 #about {
-    padding: 50px 20px;
-    background-color: #f9f9f9;  /* Cor suave de fundo */
+    padding: 80px 20px; /* Espaçamento ao redor da seção */
+    background-color: #f4f4f4; /* Cor suave de fundo */
     text-align: center;
+    position: relative;
+    overflow: hidden; /* Para evitar que a imagem transborde */
 }
 
-/* Container principal para alinhar o conteúdo */
-.about-container {
-    display: flex;
-    flex-direction: column; /* Alinha o texto em cima e a imagem embaixo */
-    align-items: center;
-    justify-content: center;
-}
-
-/* Estilo para o texto "Sobre Mim" */
-.about-text {
-    max-width: 800px;
-    margin-bottom: 30px;
-}
-
-.about-text h2 {
-    font-size: 2.5em;
+/* Título da seção */
+#about h2 {
+    font-size: 3rem;
+    font-weight: bold;
     color: #333;
     margin-bottom: 20px;
+    position: relative;
 }
 
-.about-text p {
-    font-size: 1.1em;
+ 
+
+/* Estilização do conteúdo dentro da seção */
+.about-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Para adaptar em dispositivos móveis */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Estilo da imagem */
+.about-content img {
+    width: 250px; /* Tamanho da imagem */
+    height: 250px;
+    border-radius: 50%; /* Imagem circular */
+    object-fit: cover;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Efeito de sombra suave */
+    transition: transform 0.3s ease; /* Animação de hover */
+}
+
+
+/* Estilo do texto */
+.about-content p {
+    font-size: 1.2rem;
     line-height: 1.6;
     color: #666;
-}
-
-/* Estilo para a imagem */
-.about-image img {
-    width: 100%;
-    max-width: 400px; /* Tamanho máximo da imagem */
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efeito de sombra suave */
+    max-width: 600px; /* Limite de largura do texto */
+    text-align: left;
+    margin-top: 15px;
 }
 
 
@@ -410,15 +421,26 @@ footer {
     .testimonial {
         max-width: 100%;
     }
-    
-    .about-container {
-        flex-direction: row; /* Alinha o texto ao lado da imagem */
-        text-align: left;
+
+    #about h2 {
+        font-size: 2.5rem; /* Ajusta o tamanho do título em telas menores */
     }
 
-    .about-text {
-        margin-right: 30px;
+    .about-content {
+        flex-direction: column; /* Organiza a imagem e o texto em coluna */
+        text-align: center;
     }
+
+    .about-content img {
+        width: 200px; /* Ajuste no tamanho da imagem */
+        height: 200px;
+    }
+
+    .about-content p {
+        font-size: 1rem; /* Reduz o tamanho da fonte do texto */
+        max-width: 90%; /* Permite que o texto ocupe mais espaço em telas pequenas */
+    }
+
 }
 
 @media (max-width: 480px) {
